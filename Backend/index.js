@@ -1,6 +1,9 @@
 const express = require('express');
+const mongoose = require('mongoose');
 
 const app = express();
+
+mongoose.connect('mongodb+srv://thiago:thiago@cluster0-1ffee.mongodb.net/week10?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
 
 app.use(express.json());
 
