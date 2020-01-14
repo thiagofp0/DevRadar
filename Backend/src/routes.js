@@ -1,10 +1,17 @@
 const {Router} = require('express');
+const axios = require('axios');
 
 const routes = Router();
 
-routes.post('/users/:id', (request, response) =>{
+routes.post('/devs', async (request, response) =>{
     console.log(request.body);
-     return response.json({message: 'Hello OmniStack'});
+    const {github_username} = request.body;
+
+    const apiResponse= await axios.get(`https://api.github.com/users/${github_username}`);
+
+    console.log(apiResponse.data);
+
+    return response.json({message: 'Hello OmniStack'});
 });
 
 module.exports = routes;
