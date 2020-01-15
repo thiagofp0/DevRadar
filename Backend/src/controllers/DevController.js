@@ -1,5 +1,6 @@
 const axios = require('axios');
 const Dev = require('../models/Dev');
+const parseStringAsArray = require('../utils/ParseStringAsArray');
 
 module.exports = {
 
@@ -9,7 +10,6 @@ module.exports = {
     },
     //Função que cadastra os devs
     async store(request, response){
-        console.log(request.body);
         const {github_username, techs, latitude, longitude} = request.body;
 
         let dev = await Dev.findOne({github_username});
@@ -19,7 +19,7 @@ module.exports = {
     
             const {name = login, avatar_url, bio} = apiResponse.data;
         
-            const techsArray  = techs.split(',').map(tech => tech.trim());
+            const techsArray  = parseStringAsArray(techs);
         
             const location = {
                 type: 'Point',
