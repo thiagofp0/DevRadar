@@ -3,6 +3,9 @@ import React from 'react';
 import './App.css';
 import './global.css';
 import './Sidebar.css';
+import './Main.css';
+
+
 
 //Conceitos:
 
@@ -26,24 +29,24 @@ function App() {
         <strong>Cadastrar</strong>
         <form>
 
-          <div class="input-block">
+          <div className="input-block">
             <label htmlFor="github_username">Usuário do Github</label>
             <input name="github_username" id="github_username" required></input>
           </div>
 
-          <div class="input-block">
+          <div className="input-block">
             <label htmlFor="techs">Tecnologias</label>
             <input name="techs" id="techs" required></input>
           </div>
 
-          <div class="input-group">
+          <div className="input-group">
 
-            <div class="input-block">
+            <div className="input-block">
               <label htmlFor="latitude">Latitude</label>
               <input name="latitude" id="latitude" required></input>
             </div>
 
-            <div class="input-block">
+            <div className="input-block">
               <label htmlFor="longitude">Longitude</label>
               <input name="longitude" id="longitude" required></input>
             </div>
@@ -51,7 +54,59 @@ function App() {
           <button type="submit">Salvar</button>
         </form>
       </aside>
-      <main>
+      <main> 
+
+        <ul>
+
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars3.githubusercontent.com/u/43502488?s=460&v=4" alt=""/>
+              <div className="user-info">
+                <strong>Thiago Ferreira</strong>
+                <span>ReactJS, React-Native, NodeJS</span>
+              </div>
+            </header>
+            <p>Técnico em informática | CEFET-MG Ciência da computação | UFV Gerente de projetos | No Bugs - Empresa Júnior de Informática</p>
+            <a href="https://github.com/thiagofp0">Acessar perfil no Github</a>
+          </li>
+
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars3.githubusercontent.com/u/43502488?s=460&v=4" alt=""/>
+              <div className="user-info">
+                <strong>Thiago Ferreira</strong>
+                <span>ReactJS, React-Native, NodeJS</span>
+              </div>
+            </header>
+            <p>Técnico em informática | CEFET-MG Ciência da computação | UFV Gerente de projetos | No Bugs - Empresa Júnior de Informática</p>
+            <a href="https://github.com/thiagofp0">Acessar perfil no Github</a>
+          </li>
+
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars3.githubusercontent.com/u/43502488?s=460&v=4" alt=""/>
+              <div className="user-info">
+                <strong>Thiago Ferreira</strong>
+                <span>ReactJS, React-Native, NodeJS</span>
+              </div>
+            </header>
+            <p>Técnico em informática | CEFET-MG Ciência da computação | UFV Gerente de projetos | No Bugs - Empresa Júnior de Informática</p>
+            <a href="https://github.com/thiagofp0">Acessar perfil no Github</a>
+          </li>
+
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars3.githubusercontent.com/u/43502488?s=460&v=4" alt=""/>
+              <div className="user-info">
+                <strong>Thiago Ferreira</strong>
+                <span>ReactJS, React-Native, NodeJS</span>
+              </div>
+            </header>
+            <p>Técnico em informática | CEFET-MG Ciência da computação | UFV Gerente de projetos | No Bugs - Empresa Júnior de Informática</p>
+            <a href="https://github.com/thiagofp0">Acessar perfil no Github</a>
+          </li>
+
+        </ul>
 
       </main>
     </div>
