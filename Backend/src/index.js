@@ -1,9 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const routes = require('./routes');
+const http = require('http');
+
+const routes = require('./routes'); 
+const { setupWebSocket } = require('./websocket');
 
 const app = express();
+const server = http.Server(app);
+
+setupWebSocket(server);
 
 mongoose.connect('mongodb+srv://thiago:thiago@cluster0-1ffee.mongodb.net/week10?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
 
@@ -18,6 +24,4 @@ app.use(routes);
 //Route Params - Usa no put e no delete - request.params - (Identificar um recurso na alteração ou remoção)
 //Body - Usa no Post e Put - request.body - (Dados para criação ou alteração de um registro)
 
-
-
-app.listen(3333);
+server.listen(3333);
