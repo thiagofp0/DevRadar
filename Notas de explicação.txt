@@ -1,0 +1,15 @@
+Dependências de produção:
+
+	express -> É um micro framework que permite trabalhar com rotas dentro da aplicação
+
+	nodemon -> É uma ferramenta que faz a reinicialização do servidor sempre quando uma alteração é feita no código
+
+	mongoose -> É a ferramenta que faz a ponte entre o banco de dados e a aplicação - Ele que encapsula a lógica do bd, permitindo fazer as parada só na base do JavaScipt.
+
+comandos do terminal:
+
+	npm install -> Instala dependências de produção dentro do projeto
+
+	node <nomeDoArquivo> serve para executar um arquivo usando o node
+
+	npm run -> executa scripts do arquivo package.json
